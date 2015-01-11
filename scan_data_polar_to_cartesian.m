@@ -106,6 +106,7 @@ ydata = reshape(ydata,[(j*k),1]);
 
 zdata = reshape(repmat(time_stamp,1,k),[(j*k),1]);  % time data
 
+xdata = xdata*(-1);        % mirrors data about the y-axis
     
 %% Plot data
 

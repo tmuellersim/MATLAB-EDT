@@ -98,21 +98,26 @@ angle = (angle_min:angle_increment:angle_max);
 cos_angle = cos(angle);
 sin_angle = sin(angle);
 
-xdata = bsxfun(@times,range_data,cos_angle);    % x = r*cos(theta)
-ydata = bsxfun(@times,range_data,sin_angle);    % y = r*sin(theta)
+ydata = bsxfun(@times,range_data,cos_angle);    % y = r*cos(theta)
+xdata = bsxfun(@times,range_data,sin_angle);    % x = r*sin(theta)
 
 xdata = reshape(xdata,[(j*k),1]);
 ydata = reshape(ydata,[(j*k),1]);
 
 zdata = reshape(repmat(time_stamp,1,k),[(j*k),1]);  % time data
 
+xdata = xdat*(-1
     
 %% Plot data
 
-figure
-plot(xdata,ydata,
+figure;
+scatter3(xdata,ydata,zdata,'.');
+title('Scan Data');
+xlabel('X-Axis [m]');
+ylabel('Y-Axis [m]');
+zlabel('Time [sec]');
     
-    
+view(0,90);         % Top down view
     
     
     
