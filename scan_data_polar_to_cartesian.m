@@ -8,7 +8,7 @@
 clear all; clc;
 
 %% Initialize variables.
-filename = 'C:\Users\Tim\Desktop\scan_sawhorse_test.txt';     % Change this file location!
+filename = 'C:\Users\Tim\Documents\MATLAB\MATLAB-EDT\scan_sawhorse_test.txt';     % Change this file location!
 delimiter = ',';
 
 %% Read columns of data as strings:
